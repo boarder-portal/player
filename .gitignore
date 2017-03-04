@@ -1,0 +1,9 @@
+*~
+
+node_modules/
+bower_components/
+.idea/
+build/
+
+bundle.js
+npm-debug.log
