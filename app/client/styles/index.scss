@@ -1,0 +1,19 @@
+@mixin generate-styles-1($n, $i: 0){
+  .marg-t-#{$i} { margin-top: #{$i}px !important }
+  .marg-b-#{$i} { margin-bottom: #{$i}px !important }
+  .marg-r-#{$i} { margin-right: #{$i}px !important }
+  .marg-l-#{$i} { margin-left: #{$i}px !important }
+  .marg-#{$i} { margin: #{$i}px !important }
+
+  .pad-t-#{$i} { padding-top: #{$i}px !important }
+  .pad-b-#{$i} { padding-bottom: #{$i}px !important }
+  .pad-r-#{$i} { padding-right: #{$i}px !important }
+  .pad-l-#{$i} { padding-left: #{$i}px !important }
+  .pad-#{$i} { padding: #{$i}px !important }
+
+  @if $n >= $i {
+    @include generate-styles-1($n, ($i + 5));
+  }
+}
+
+@include generate-styles-1(100);
